@@ -1,15 +1,16 @@
 package com.company;
-
+import java.util.*;
 /**
  * Created by fs279 on 11/10/16.
  */
 public class Student {
     public double getGPA(){
-        return gPA;
+        return GPA;
     }
     public  boolean isHonors(){
         return honors;
     }
-    public double gPA = (Math.random()*4);
-    public boolean honors = 1== (int)(Math.random()*2);
+    public double GPA = Math.random()*4;
+    public Random rand = new Random();
+    public boolean honors = 0.5 < Math.random();//This is broken but it isn't really part of the assignment so I'm going to ask you about it tomorrow
 }

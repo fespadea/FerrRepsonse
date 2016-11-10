@@ -13,6 +13,6 @@ public class Main {
         HighSchoolClass tester = new HighSchoolClass();
         Student bob = tester.getValedictorian();
         System.out.println(bob.getGPA());
-        System.out.println(tester.getHonorsPercentage());
+        System.out.println((tester.getHonorsPercentage()*100) + "%");
     }
 }

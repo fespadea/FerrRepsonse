@@ -4,7 +4,14 @@ package com.company;
  * Created by fs279 on 11/10/16.
  */
 public class HighSchoolClass {
-    private Student [] students = new Student[(int)(Math.random()*(Math.random()*50))];
+    private Student [] students = new Student[(int)(Math.random()*5000)];
+    public HighSchoolClass(){
+        int ip = 0;
+        for(Student x: students){
+            students [ip] = new Student();
+            ip++;
+        }
+    }
     public Student getValedictorian(){
         Student val = new Student();
         double pi = 0;
@@ -23,6 +30,12 @@ public class HighSchoolClass {
             if(x.isHonors()){
                 hons [le] = x;
                 le++;}}
-        return hons.length/students.length;
+        Student [] honors = new Student[le];
+        int ip = 0;
+        for(Student x: honors){
+            honors[ip] = hons [ip];
+            ip++;
+        }
+        return honors.length / students.length;
             }
         }
